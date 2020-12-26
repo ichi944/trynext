@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   mysql:
-      image: mysql:5.7.30
+      image: mysql@sha256:0563b36ec2d1a262f79e1d8562e61f642a0f64f93306d8a709047cdea0444d0a
       environment:
         MYSQL_ROOT_PASSWORD: prisma
       volumes:
