@@ -17,7 +17,7 @@ function Home({ data }: Props) {
 
 export async function getServerSideProps() {
   // Fetch data from external API
-  const res = await fetch(`http://localhost:3000/api/hello`)
+  const res = await fetch(`/api/hello`)
 	const data = await res.json()
 	console.log('@result is: ', data);
 
