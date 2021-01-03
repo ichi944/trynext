@@ -21,7 +21,7 @@ const CharacterCounter: React.FC = () => {
     <div>
       <input type="text" value={text} onChange={onChange}/>
       <div>count is: { counter }</div>
-      <div><button onClick={() => increment()}>Increment</button></div>
+      <div><button onClick={increment}>Increment</button></div>
       Hello Recoil!
     </div>
   )

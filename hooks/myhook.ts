@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useCallback } from 'react'
 import { atom, useRecoilState } from 'recoil'
 
 export const counterState = atom({
@@ -8,9 +8,10 @@ export const counterState = atom({
 
 export const useMyhook = () => {
   const [counter, setCounter] = useRecoilState(counterState);
-  // const increment = useCallback(() => {
-  //   setCounter(counter + 1);
-  // }, []);
-  const increment = () => setCounter(counter + 1)
-  return [counter, increment];
+  console.log('@useMyhook counter : ', counter)
+  const increment = useCallback(() => {
+    setCounter(counter + 1);
+  }, [counter]);
+  return [counter, increment] as const;
 }
+
